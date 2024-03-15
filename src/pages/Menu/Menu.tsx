@@ -18,6 +18,7 @@ export function Menu() {
 				price={300}
 				image='/product.png'
 			/>
+
 		</div>
 	</>;
 }
