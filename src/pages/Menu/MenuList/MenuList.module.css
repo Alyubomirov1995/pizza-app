@@ -1,7 +1,12 @@
-.wrapper {
+.card {
    display: flex;
    flex-wrap: wrap;
    gap: 40px;
    margin-top: 30px;
 
+}
+
+
+.product-card {
+list-style-type: none
 }

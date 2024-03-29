@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { loadState } from './storage';
 import axios, { AxiosError } from 'axios';
-import { PREFIX } from '../helpers/API';
+import { PREFIX } from '../helpers/API.constants.ts';
 import { LoginResponse } from '../layout/Auth/auth.interface';
 import { Profile } from '../intefaces/user.interface';
 import { RootState } from './store';

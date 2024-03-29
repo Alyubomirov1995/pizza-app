@@ -1,11 +1,19 @@
 import { Await, useLoaderData} from 'react-router-dom';
 import type { Product } from '../../intefaces/product.interface';
 import { Suspense } from 'react';
+import ClipLoader from 'react-spinners/ClipLoader';
+
 
 export function Product() {
 	const data = useLoaderData() as { data: Product};
 	return <>
-		<Suspense fallback={'Загружаю...'}>
+		<Suspense fallback={
+			<ClipLoader
+				size={50}
+				aria-label="Loading Spinner"
+				data-testid="loader"
+			/>
+		}>
 			<Await
 				resolve={data.data}
 			>
@@ -15,4 +23,5 @@ export function Product() {
 			</Await>
 		</Suspense>
 	</>;
-}
+
+} 

@@ -6,7 +6,7 @@ import { Cart } from './pages/Cart/Cart.tsx';
 import { Error } from './pages/Error/Error.tsx';
 import { Layout } from './layout/Menu/Layout.tsx';
 import { Product } from './pages/Product/Product.tsx';
-import { PREFIX } from './helpers/API.ts';
+import { PREFIX } from './helpers/API.constants.ts';
 import axios from 'axios';
 import { AuthLayout } from './layout/Auth/AuthLayout.tsx';
 import { Login } from './pages/Login/Login.tsx';
