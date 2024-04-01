@@ -5,6 +5,7 @@ import ClipLoader from 'react-spinners/ClipLoader';
 
 
 export function Product() {
+
 	const data = useLoaderData() as { data: Product};
 	return <>
 		<Suspense fallback={
@@ -18,10 +19,14 @@ export function Product() {
 				resolve={data.data}
 			>
 				{({data} : { data: Product }) => (
-					<>Product - {data.name}</>
+					<>
+						<div>{data.id}</div></>
 				)}
+
 			</Await>
+         
 		</Suspense>
+		
 	</>;
 
 } 
