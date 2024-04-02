@@ -48,8 +48,8 @@ export function Register() {
 		<Headling>Регистрация</Headling>
 		{RegisterErrorMessage && <div className={styles['error']}>{RegisterErrorMessage}</div>}
 		<form className={styles['form']} onSubmit={submit}>
-			<div>
-				<label className={styles['field']}
+			<div className={styles['field']}>
+				<label 
 					htmlFor="email">Ваш email</label>
 				<Input id="email" name='email' placeholder='Email' />
 			</div>

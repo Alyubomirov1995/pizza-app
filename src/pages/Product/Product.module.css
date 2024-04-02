@@ -82,3 +82,10 @@
 .link {
    text-decoration: none;
 }
+
+.spinner {
+   display: flex;
+   justify-content: center;
+   background-color: var(--primary-color);
+   align-items: center;
+}

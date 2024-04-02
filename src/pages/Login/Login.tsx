@@ -47,8 +47,8 @@ export function Login() {
 		<Headling>Вход</Headling>
 		{loginErrorMessage && <div className={styles['error']}>{loginErrorMessage}</div>}
 		<form className={styles['form']} onSubmit={submit}>
-			<div>
-				<label className={styles['field']}
+			<div className={styles['field']}>
+				<label 
 					htmlFor="email">Ваш email</label>
 				<Input id="email" name='email' placeholder='Email' />
 			</div>

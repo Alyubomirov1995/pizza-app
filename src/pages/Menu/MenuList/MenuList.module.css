@@ -5,8 +5,11 @@
    margin-top: 30px;
 
 }
-
+ul {
+   padding: 0;
+}
 
 .product-card {
-list-style-type: none
+list-style-type: none;
 }
+
