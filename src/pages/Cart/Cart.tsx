@@ -77,7 +77,10 @@ export function Cart() {
 			<div className={styles['price']}>{total + DELIVERY_FEE}&nbsp;<span>₽</span></div>
 		</div>
 		<div className={styles['checkout']}>
-			<Button appearence="big" onClick={checkout}>Оформить</Button>
+			<Button appearence="big" onClick={() => navigate('/')}>Выбрать ещё?</Button>
+			{cartProducts.length > 0 &&  
+         <Button appearence="big"  onClick={checkout}>Оформить</Button>
+			}
 		</div>
 	</>;
 }

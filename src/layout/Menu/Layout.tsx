@@ -25,7 +25,7 @@ export function Layout() {
 	return <div className={styles['layout']}>
 		<div className={styles['sidebar']}>
 			<div className={styles['user']}>
-				<img className={styles['avatar']} src="/Avatar.png" alt="Аватарка" />
+				<img className={styles['avatar']} src="/Avatar.png" alt="Аватарка" onClick={() => navigate('/AvatarList')} />
 				<div className={styles['name']}>{profile?.name}</div>
 				<div className={styles['email']}>{profile?.email}</div>
 
@@ -42,8 +42,8 @@ export function Layout() {
 				})}>
 					<img src="/cart-icon.svg" alt="Иконка корзины" />
 					Корзина 
-					<span className={styles['cart-count']}> {items.reduce((acc, item) => acc += item.count, 0)}
-					</span></NavLink>
+					{items.reduce((acc, item) => acc + item.count, 0) > 0 &&
+               <span className={styles['cart-count']}> {items.reduce((acc, item) => acc + item.count, 0)}</span>}</NavLink>
 				
 			</div>
 			<Button className={styles['exit']} onClick={logout}>

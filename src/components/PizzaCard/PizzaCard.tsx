@@ -34,10 +34,10 @@ function PizzaCard(props: PizzaCardProps) {
 							<img src="/star-icon.svg" alt="иконка звезды"/></div>
 					</div>
 
-					<ul className={styles['description']}>
-						<div>Состав:</div> 
-						<div>{props.description}</div>
-					</ul>
+					<div className={styles['description']}>
+						<ul>Состав:</ul>
+						<li>{props.description}</li>
+					</div>
 				</div><div className={styles['header']}>
 					<Button appearence='big' onClick={add}><img src="/Bag-icon.svg" alt="Икока добавить в корзину"/> В корзину</Button>
 				</div>
