@@ -6,6 +6,8 @@ import { UserActions, getProfile } from '../../store/user.slice';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../store/store';
 import { useEffect } from 'react';
+import { AvatarList } from '../../pages/AvatarList/AvatarList';
+
 
 export function Layout() {
 	const navigate = useNavigate();
@@ -16,6 +18,10 @@ export function Layout() {
 	useEffect(() => {
 		dispatch(getProfile());
 	}, []);
+	AvatarList();
+
+
+	
 	
 	const logout = () => {
 		dispatch(UserActions.logout());
@@ -25,10 +31,11 @@ export function Layout() {
 	return <div className={styles['layout']}>
 		<div className={styles['sidebar']}>
 			<div className={styles['user']}>
-				<img className={styles['avatar']} src="/Avatar.png" alt="Аватарка" onClick={() => navigate('/AvatarList')} />
+				<div className={styles['avatar']}>
+					<img id="avatar" src="/Avatar.png" alt="Аватарка" title='Сменить аватар' onClick={() => navigate('/AvatarList')} />
+				</div>
 				<div className={styles['name']}>{profile?.name}</div>
 				<div className={styles['email']}>{profile?.email}</div>
-
 
 			</div>
 			<div className={styles['menu']}>
@@ -56,3 +63,6 @@ export function Layout() {
 		</div>
 	</div>;
 }
+
+
+

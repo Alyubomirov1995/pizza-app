@@ -14,3 +14,15 @@
    font-weight: 300;
    line-height: 120%;
 }
+
+.avatar {
+   padding-top: 30px;
+   background-color: white
+}
+   .avatar:hover {
+   height: 20%;
+   background-color: aliceblue;
+   cursor: pointer;
+   
+   
+}
