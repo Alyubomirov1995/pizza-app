@@ -1,4 +1,6 @@
-export interface ProductCardProps {
+
+
+export interface PizzaCardProps {
    id: number;
    name: string;
    description: string;
@@ -6,3 +8,4 @@ export interface ProductCardProps {
    price: number;
    rating: number;
 }
+
