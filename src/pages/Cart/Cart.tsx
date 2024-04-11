@@ -62,25 +62,29 @@ export function Cart() {
 			}
 			return <CartItem key={product.id} count={i.count} {...product}/>;
 		})}
-		<div className={styles['line']}>
-			<div className={styles['text']}>Итог</div>
-			<div className={styles['price']}>{total}&nbsp;<span>₽</span></div>
-		</div>
-		<hr className={styles['hr']}/>
-		<div className={styles['line']}>
-			<div className={styles['text']}>Доставка</div>
-			<div className={styles['price']}>{DELIVERY_FEE}&nbsp;<span>₽</span></div>
-		</div>
-		<hr className={styles['hr']}/>
-		<div className={styles['line']}>
-			<div className={styles['text']}>Итог <span className={styles['total-count']}>({items.length})</span></div>
-			<div className={styles['price']}>{total + DELIVERY_FEE}&nbsp;<span>₽</span></div>
-		</div>
-		<div className={styles['checkout']}>
-			<Button appearence="big" onClick={() => navigate('/')}>Выбрать ещё?</Button>
-			{cartProducts.length > 0 &&  
+		<div className={styles['container']}>
+			<div className={styles['price-block']}>
+				<div className={styles['line']}>
+					<div className={styles['text']}>Итог</div>
+					<div className={styles['price']}>{total}&nbsp;<span>₽</span></div>
+				</div>
+				<hr className={styles['hr']}/>
+				<div className={styles['line']}>
+					<div className={styles['text']}>Доставка</div>
+					<div className={styles['price']}>{DELIVERY_FEE}&nbsp;<span>₽</span></div>
+				</div>
+				<hr className={styles['hr']}/>
+				<div className={styles['line']}>
+					<div className={styles['text']}>Итог <span className={styles['total-count']}>({items.length})</span></div>
+					<div className={styles['price']}>{total + DELIVERY_FEE}&nbsp;<span>₽</span></div>
+				</div>
+				<div className={styles['checkout']}>
+					<Button appearence="big" onClick={() => navigate('/')}>Выбрать ещё?</Button>
+					{cartProducts.length > 0 &&  
          <Button appearence="big"  onClick={checkout}>Оформить</Button>
-			}
+					}
+				</div>
+			</div>
 		</div>
 	</>;
 }

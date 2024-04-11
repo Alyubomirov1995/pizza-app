@@ -2,6 +2,15 @@
    margin-bottom: 40px;
 }
 
+.container {
+   display: flex;
+   padding-top: 30px;
+   justify-content: center;
+  
+}
+.price-block { 
+   min-width: 700px;
+}
 .line {
    max-width: 512px;
    display: flex;
@@ -49,6 +58,7 @@
    max-width: 512px;
    display: flex;
    align-items: center;
-   justify-content: center;
+   justify-content: space-around;
    margin-top: 70px;
 }
+

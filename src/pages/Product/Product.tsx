@@ -1,4 +1,4 @@
-import { Await, useLoaderData, useParams} from 'react-router-dom';
+import { Await, useLoaderData, useNavigate, useParams} from 'react-router-dom';
 import type { Product } from '../../intefaces/product.interface';
 import { Key, Suspense, useEffect, useState } from 'react';
 import ClipLoader from 'react-spinners/ClipLoader';
@@ -6,11 +6,13 @@ import { PREFIX } from '../../helpers/API.constants';
 import PizzaCard from '../../components/PizzaCard/PizzaCard';
 import Headling from '../../components/Headling/Headling';
 import styles from './Product.module.css';
+import Button from '../../components/Button/Button';
 
 
 export function Product() {
 	const [product, setProduct] = useState<Product>();
 	const { id } = useParams<{ id: string }>();
+	const navigate = useNavigate();
 
 	const getProduct = async (productId: number  ) => {
 		try {
@@ -44,11 +46,13 @@ export function Product() {
 			/>
 		}>
 			<Await
-				resolve={data.data}
+				resolve  ={data.data}
 			>
 				{({data} : { data: Product }) => (
-					<>
-						<Headling className={styles['headling']}>{data.name}</Headling></>
+					<><div className={styles['header']}>
+						<Button appearence="small" onClick={() => navigate('/')}>Назад</Button>
+						<Headling className={styles['headling']}>{data.name}</Headling></div>
+					</>
 				)}
 			</Await>
 			<div>
@@ -58,7 +62,7 @@ export function Product() {
 					rating={product.rating}
 					price={product.price}
 					image={product.image} 
-					description={product.ingredients.join(', ')}	/>}
+					description={product.ingredients}	/>}
 				
 			</div> 
          

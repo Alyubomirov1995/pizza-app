@@ -12,22 +12,19 @@ export function AvatarList() {
 	}, []);
 
 	const handleAvatarClick = (event) => {
+		
 		const selectedAvatar = event.target.src;
 		localStorage.setItem('selectedAvatar', selectedAvatar);
 		document.getElementById('avatar').src = selectedAvatar;
 	};
+	const avatarList = ['/Avatar.png', '/Avatar1.png', '/Avatar2.png', '/Avatar3.png', '/Avatar4.png', '/Avatar5.png'];
 
 	return (
 		<>
 			<Headling className={styles['headling']}>Выбрать аватарку</Headling>
-			<div>
-				<img className={styles['avatar']} src="/Avatar.png" alt="Аватарка" onClick={handleAvatarClick} />
-				<img className={styles['avatar']} src="/Avatar1.png" alt="Аватарка" onClick={handleAvatarClick} />
-				<img className={styles['avatar']} src="/Avatar2.png" alt="Аватарка" onClick={handleAvatarClick} />
-				<img className={styles['avatar']} src="/Avatar3.png" alt="Аватарка" onClick={handleAvatarClick} />
-				<img className={styles['avatar']} src="/Avatar4.png" alt="Аватарка" onClick={handleAvatarClick} />
-				<img className={styles['avatar']} src="/Avatar5.png" alt="Аватарка" onClick={handleAvatarClick} />
-			</div>
+			{avatarList.map((avatar, index) => (
+				<img key={index} className={styles['avatar']} src={avatar} alt="Аватарка" onClick={handleAvatarClick} />
+			))}
 		</>
 	);
 }
