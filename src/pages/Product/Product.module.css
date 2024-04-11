@@ -4,6 +4,14 @@
    border-radius: 19px;
 }
 
+.header {
+   display: flex;
+}
+
+.headling {
+   padding-left: 50px;
+}
+
 .card {
    background: var(--white-color);
    border-radius: 19px;
