@@ -1,30 +1,62 @@
-# React + TypeScript + Vite
+pizza-app - веб-приложение для выбора и заказа еды.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Результат работы
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Общий обзор функционала приложения (public/demo.gif)
 
-## Expanding the ESLint configuration
+## Требования к системе
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- система должна быть многопользовательсткая и с возможностью регистрации.
 
-- Configure the top-level `parserOptions` property like this:
+Должны быть реализованы следующие страницы:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- Страница логина для пользователя.
+- Страница регистрации для пользователя.
+  регистрация состоит из полей -  email, пароль, имя
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Для авторизованных пользователей должны быть реализованы следующие страницы:
+
+Общий интерейс приложения.
+приложение визуально разделено на 2 части. Слева располагается фиксированная часть, состоящая из аватарки, имени и Имейла. Ниже находятся активные кнопки выбора "Меню" и "Корзина". в самом низу страницы есть кноака "Выход", читобы сменить пользователя и покинуть аккаунт. 
+
+в правой части, в зависимость от выбора, отображаются следующие страницы 
+
+- Меню 
+Состоит из нескольких разворачивающихся при нажатии карточек. в свернутом виде имеют фото блюда и информация о цене, рейтинге, названии,и состава блюда. В верхнем правом углу есть кнопка добавить в корзину.  
+
+-Развёрнутая карточка товара. 
+Имеет заголовок с названием товара и кнопку назад слева от него. Сама карточка состоит из фото, цены, рейтинга, состава и кнопки добавить в корзину. 
+
+-Корзина.
+Состоит из заголовка и блока подсчёта заказа:Итог, доставка, конечный итог. а так же кнопки "выбрать ещё" если корзина пуста и кнопок "выбрать ещё" и "оформить", если в корзину добавлены товары. Если в корзине есть добавленные товары, то они отображаются в верхней части страницы в виде мини-фото названия и цены. в правой части напротив товара есть 3 кнопки: "уменьшить" "увеличить" и "удалить" заказ. между первыми двумя кгнопками расположен счётчик количества.
+
+-Страница выбора аватарки. 
+При нажатии в левой части на аватарку открывается дополнительная страница с выбором из 6 вариантов. При нажатии на понравившуюся она становится основной и не меняется при обновлении или переходе на другие страницы приложения. 
+
+Для администраторов должны быть реализованы следующие страницы:
+
+- Главная страница: содержит список вещей с возможностью удаления.
+- Страница со списком пользователей с возможностью удаления.
+- Страница со списком категорий с возможностью добавления и удаления.
+- Все редактируемые поля должны иметь соответствующую валидацию.
+
+
+## Реализация
+
+**Управление разработкой**
+
+**Frontend:**
+
+- TypeScript
+- CSS
+- Redux
+- React
+
+
+***
+
+**Backend:**
+
+- Insomnia
+
