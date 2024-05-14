@@ -2,7 +2,7 @@
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../../store/Cart.slice';
 import { AppDispatch } from '../../store/store';
-import styles from './PizzaCard.module.css';
+import styles from './PizzaCard.module.scss';
 import { PizzaCardProps } from './PizzaCard.props';
 import {MouseEvent, useEffect, useState } from 'react';
 import Button from '../Button/Button';

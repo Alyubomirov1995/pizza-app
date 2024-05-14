@@ -1,0 +1,32 @@
+@mixin flex-container($flex-direction,$justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+
+.success {
+   @include flex-container(column, center, center);
+   gap: 30px;
+}
+
+.text {
+   color: var(--text-color);  
+   text-align: center;
+   line-height: 120%;
+   font: {
+      size: 31px;
+      style: normal;
+      weight: 300;
+   }   
+}
+
+.avatar {
+   padding-top: 30px;
+   background-color: white
+}
+   .avatar:hover {
+   background-color: aliceblue;
+   cursor: pointer;
+}

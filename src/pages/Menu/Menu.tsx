@@ -3,7 +3,7 @@ import Headling from '../../components/Headling/Headling';
 import Search from '../../components/Search/Search';
 import { PREFIX } from '../../helpers/API.constants.ts';
 import { Product } from '../../intefaces/product.interface';
-import styles from './Menu.module.css';
+import styles from './Menu.module.scss';
 import axios, { AxiosError } from 'axios';
 import { MenuList } from './MenuList/MenuList';
 

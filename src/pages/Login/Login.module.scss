@@ -1,0 +1,59 @@
+@mixin flex-container($flex-direction,$justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+
+.login {
+   @include flex-container(column, none, none);
+   gap: 30px;
+   width: 100%;
+   max-width: 500px;
+}
+
+.form {
+   @include flex-container(column, none, none);
+   gap: 30px;
+}
+
+.field {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   
+
+}
+
+.field label {
+   color: #c4c4c4;
+   font: {
+      size: 17px;
+      style: normal;
+      weight: 400;
+   }
+}
+
+.links {
+   @include flex-container(column, center, none);
+   color: var(--text-secondary-color);
+   text-align: center;
+   font: {
+      family: Open Sans;
+      size: 14px;
+   }
+}
+
+.links a {
+   text-decoration: none;
+   color: var(--primary-color);
+}
+
+.error {
+   background: #ffc529;
+   color: white;
+   padding: 20px; 
+   border-radius: 5px;
+
+}

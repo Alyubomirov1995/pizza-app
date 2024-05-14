@@ -1,5 +1,5 @@
 import { MouseEvent, useEffect } from 'react';
-import styles from './AvatarList.module.css';
+import styles from './AvatarList.module.scss';
 import Headling from '../../components/Headling/Headling';
 
 export function AvatarList() {

@@ -1,5 +1,5 @@
 import {NavLink, Outlet, useNavigate} from 'react-router-dom';
-import styles from './Layout.module.css';
+import styles from './Layout.module.scss';
 import Button from '../../components/Button/Button';
 import cn from 'classnames';
 import { UserActions, getProfile } from '../../store/user.slice';

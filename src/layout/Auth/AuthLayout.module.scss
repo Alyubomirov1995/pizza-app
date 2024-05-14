@@ -1,0 +1,23 @@
+@mixin flex-container($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+
+.layout {
+   @include flex-container(none, none);
+   display: flex;
+   min-height:  100vh;
+}
+
+.logo {
+   flex: 1;
+   @include flex-container(center, center);
+}
+
+.content {
+   border-left: 1px solid var(--separator-color);
+   flex: 1;
+   @include flex-container(center, center);
+}

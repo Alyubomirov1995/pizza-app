@@ -1,0 +1,85 @@
+@mixin flex-container($flex-direction,$justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+@mixin font($font-family, $font-size, $font-weight, $line-height) {
+   font-family:$font-family;
+   font-size: $font-size;
+   font-weight: $font-weight;
+   line-height: $line-height;
+}
+
+.head {
+	position: relative;
+	min-height: 165px;
+	border-radius: 19px;
+}
+.header {
+	@include flex-container(none, none, none);
+}
+.headling {
+	padding-left: 50px;
+}
+.card {
+	background: var(--white-color);
+	border-radius: 19px;
+	box-shadow: 18.21428680419922px 18.21428680419922px 36.42857360839844px 0px #D3D1D840;
+	width: 320px;
+}
+.footer {
+	padding: 12px;
+}
+.name {
+	@include font(Open Sans, 18px, 600, normal);
+}
+.description {
+	color: var(--text-secondary-color);
+	@include font(Open Sans, 15px, 400, normal);
+}
+.price {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	background: var(--white-color);
+	padding: 3px 10px;
+	border-radius: 20px;
+	color: #111719;
+	@include font(Open Sans, 20px, 400, normal);
+}
+.currency {
+	color: var(--primary-color);
+}
+.rating {
+	position: absolute;
+	bottom: -12px;
+	left: 15px;
+	background: var(--white-color);
+	padding: 3px 8px;
+	border-radius: 20px;
+	color: #111719;
+	@include font(Open Sans, 12px, 400, normal);
+	box-shadow: 0px 6.0714287757873535px 24.285715103149414px 0px #FE724C33;
+}
+.add-to-cart {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background: var(--primary-color);
+	border-radius: 50%;
+	width: 34px;
+	height: 34px;
+	border: none;
+	cursor: pointer;
+	&:hover {
+		background: var(--primary-hover-color);
+	}
+}
+.link {
+	text-decoration: none;
+}
+.spinner {
+	@include flex-container(none, center, center);
+	background-color: var(--primary-color);
+}

@@ -1,7 +1,8 @@
 .input {
-   font-size: 14px;
-   font-style: normal;
-   font-weight: 400;
+   font: {
+      size: 14px;
+      style: normal;
+      weight: 400;}
    color: var(--text-color);
    background-color: #fcfcfd;
    border: 1px solid #efefef;
