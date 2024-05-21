@@ -1,14 +1,15 @@
+@use '../../utils.scss';
+
+
 .login {
-   display: flex;
-   flex-direction: column;
+   @include utils.flex-container(column, none, none);
    gap: 30px;
    width: 100%;
    max-width: 500px;
 }
 
 .form {
-   display: flex;
-   flex-direction: column;
+   @include utils.flex-container(column, none, none);
    gap: 30px;
 }
 
@@ -22,21 +23,21 @@
 
 .field label {
    color: #c4c4c4;
-   font-size: 17px;
-   font-style: normal;
-   font-weight: 400;
-
+   font: {
+      size: 17px;
+      style: normal;
+      weight: 400;
+   }
 }
 
 .links {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+   @include utils.flex-container(column, center, none);
    color: var(--text-secondary-color);
    text-align: center;
-   font-family: Open Sans;
-   font-size: 14px;
-
+   font: {
+      family: Open Sans;
+      size: 14px;
+   }
 }
 
 .links a {

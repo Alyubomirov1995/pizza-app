@@ -1,6 +1,6 @@
 import ProductCard from '../../../components/ProductCard/ProductCard';
 import { MenuListProps } from './MenuList.props';
-import styles from './MenuList.module.css';
+import styles from './MenuList.module.scss';
 
 export function MenuList ({ products}: MenuListProps) {
 	return <ul className={styles.card}> {products.map(p => (

@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { Product } from '../../intefaces/product.interface';
 import { PREFIX } from '../../helpers/API.constants';
 import axios from 'axios';
-import styles from './Cart.module.css';
+import styles from './Cart.module.scss';
 import Button from '../../components/Button/Button';
 import { useNavigate } from 'react-router-dom';
 import { cartActions } from '../../store/Cart.slice';

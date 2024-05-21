@@ -1,0 +1,21 @@
+@use '../../utils.scss';
+
+
+.success {
+   @include utils.flex-container(column, center, center);
+   gap: 30px;
+}
+
+.text {
+   @include utils.font(var(--text-color), none, 31px, normal, 300, 120%);  
+   text-align: center;
+}
+
+.avatar {
+   padding-top: 30px;
+   background-color: white
+}
+   .avatar:hover {
+   background-color: aliceblue;
+   cursor: pointer;
+}

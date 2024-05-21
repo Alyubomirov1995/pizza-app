@@ -1,0 +1,16 @@
+@use '../../utils.scss';
+
+.success {
+   @include utils.flex-container(column, center, center);
+   gap: 30px;
+}
+
+.text {
+   color: var(--text-color);  
+   text-align: center;
+   font: {
+      size: 31px;
+      style: normal;
+      weight: 300;}
+   line-height: 120%;
+}

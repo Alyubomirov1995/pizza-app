@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styles from './ProductCard.module.css';
+import styles from './ProductCard.module.scss';
 import { ProductCardProps } from './ProductCard.props';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../store/store';

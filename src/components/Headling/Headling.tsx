@@ -1,5 +1,5 @@
 
-import styles from './Headling.module.css';
+import styles from './Headling.module.scss';
 import cn from 'classnames';
 import { HeadlingProps } from './Headling.props';
 

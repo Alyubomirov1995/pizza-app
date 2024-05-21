@@ -5,7 +5,7 @@ import ClipLoader from 'react-spinners/ClipLoader';
 import { PREFIX } from '../../helpers/API.constants';
 import PizzaCard from '../../components/PizzaCard/PizzaCard';
 import Headling from '../../components/Headling/Headling';
-import styles from './Product.module.css';
+import styles from './Product.module.scss';
 import Button from '../../components/Button/Button';
 
 

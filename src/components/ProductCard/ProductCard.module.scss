@@ -1,15 +1,9 @@
+@use '../../utils.scss';
+
 .head {
    position: relative;
    min-height: 165px;
    border-radius: 19px;
-}
-
-.header {
-   display: flex;
-}
-
-.headling {
-   padding-left: 50px;
 }
 
 .card {
@@ -23,18 +17,11 @@
    padding: 12px;
 }
 .name {
-   font-family: Open Sans;
-   font-size: 18px;
-   font-weight: 600;
-   line-height: normal;
+   @include utils.font(none, Open Sans, 18px, none, 600, normal);
 }
 
 .description {
-   color: var(--text-secondary-color);
-   font-family: Open Sans;
-   font-size: 15px;
-   font-weight: 400;
-   line-height: normal;
+   @include utils.font(var(--text-secondary-color), Open Sans, 15px, none, 400, normal);
 }
 
 .price {
@@ -44,11 +31,7 @@
    background: var(--white-color);
    padding: 3px 10px;
    border-radius: 20px;
-   color: #111719;
-   font-family: Open Sans;
-   font-size: 20px;
-   font-weight: 400;
-   line-height: normal;
+   @include utils.font(#111719, Open Sans, 20px, none, 400, normal);
 }
 
 .currency {
@@ -62,13 +45,8 @@
    background: var(--white-color);
    padding: 3px 8px;
    border-radius: 20px;
-   color: #111719;
-   font-family: Open Sans;
-   font-size: 12px;
-   font-weight: 400;
-   line-height: normal;
    box-shadow: 0px 6.0714287757873535px 24.285715103149414px 0px #FE724C33;
-
+   @include utils.font(#111719, Open Sans, 12px, none, 400, normal);
 }
 
 .add-to-cart {
@@ -76,7 +54,7 @@
    top: 15px;
    right: 15px;
    background: var(--primary-color);
-   border-radius: 50%;
+   border-radius: var(--b-r);
    width: 34px;
    height: 34px;
    border: none;
@@ -89,11 +67,4 @@
 
 .link {
    text-decoration: none;
-}
-
-.spinner {
-   display: flex;
-   justify-content: center;
-   background-color: var(--primary-color);
-   align-items: center;
 }

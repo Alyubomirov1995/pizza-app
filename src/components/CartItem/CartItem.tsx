@@ -1,4 +1,4 @@
-import styles from './CartItem.module.css';
+import styles from './CartItem.module.scss';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../store/store';
 import { cartActions } from '../../store/Cart.slice';
