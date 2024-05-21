@@ -1,12 +1,7 @@
-@mixin flex-container($flex-direction,$justify-content, $align-items) {
-  display: flex;
-  flex-direction: $flex-direction;
-  justify-content: $justify-content;
-  align-items: $align-items;
-}
+@use '../../utils.scss';
 
 .card {
-   @include flex-container(none,none,none);
+   @include utils.flex-container(none,none,none);
    gap: 30px;
    padding-top: 30px;
 }
@@ -19,21 +14,16 @@ background-size:100% 100%;
 }
 
 .card-info {
-   @include flex-container(column,top,none);
+   @include utils.flex-container(column,top,none);
 }
 
 .description {
-   color: var(--text-secondary-color);
-   font: {
-      family: Open Sans;
-      size: 15px;
-      weight: 600;}
-   line-height: normal;
+   @include utils.font(var(--text-secondary-color), Open Sans, 15px, none, 600, normal);
    padding: 0;
 }
 
 .price {
-   @include flex-container(none,space-between,none);
+   @include utils.flex-container(none,space-between,none);
    border-radius: 20px;
    color: #111719;
    font: {
@@ -48,7 +38,7 @@ background-size:100% 100%;
 }
 
 .rating {
-@include flex-container(none,space-between,none);
+@include utils.flex-container(none,space-between,none);
    justify-content: space-between;
    padding: 30px 0;
 
@@ -56,16 +46,9 @@ background-size:100% 100%;
 .rating-value {
    background: var(--white-color);
    border-radius: 20px;
-   color: #111719;
-   font: {
-      family: Open Sans;
-      size: 12px;
-      weight: 400;}
-   line-height: normal;
+   @include utils.font(#111719, Open Sans, 12px, none, 400, normal);
    box-shadow: 0px 6.0714287757873535px 24.285715103149414px 0px #FE724C33;
    padding-top: 3px;
-
-
 }
 
 .header {

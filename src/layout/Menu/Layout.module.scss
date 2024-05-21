@@ -1,13 +1,8 @@
-@mixin flex-container($flex-direction,$justify-content, $align-items) {
-  display: flex;
-  flex-direction: $flex-direction;
-  justify-content: $justify-content;
-  align-items: $align-items;
-}
+@use '../../utils.scss';
 
 
 .layout {
-   @include flex-container(none, none, none);
+   @include utils.flex-container(none, none, none);
    min-height: 100vh;
    
 }
@@ -15,23 +10,22 @@
 .sidebar {
    padding: 30px;
    border-right: 1px solid var(--separator-color);
-   @include flex-container(column, none, none);
-
+   @include utils.flex-container(column, none, none);
 }
 
 .exit {
    margin-top: auto;
-   @include flex-container(none, center, center);
+   @include utils.flex-container(none, center, center);
    gap: 9px;
 }
 
 .menu {
-   @include flex-container(column, none, none);
+   @include utils.flex-container(column, none, none);
    gap: 35px;
 }
 
 .link {
-   @include flex-container(none, none, center);
+   @include utils.flex-container(none, none, center);
    gap: 14px;
    text-decoration: none;
    color: var(--text-color);
@@ -57,26 +51,15 @@
 }
 .avatar:hover {
    cursor: pointer;
-
 }
 
 .name {
-   font: {
-      size: 20px;
-      style: normal;
-      weight: 700;}
-   line-height: normal;
-   color: var(--text-color);
+   @include utils.font(var(--text-color), Open Sans, 20px, normal, 700, normal);
    margin-top: -30px;
 }
 
 .email {
-   font: {
-      size: 14px;
-      style: normal;
-      weight: 400;}
-   line-height: normal;
-   color: #9ea1b1
+   @include utils.font(#9ea1b1, Open Sans, 14px, normal, 400, normal);
 }
 
 .content {
@@ -86,8 +69,8 @@
 
 .cart-count {
    background: var(--primary-color);
-   @include flex-container(none, center, center);
-   border-radius: 50%;
+   @include utils.flex-container(none, center, center);
+   border-radius: var(--b-r);
    width: 20px;
    height: 20px;
    font-size: 12px;

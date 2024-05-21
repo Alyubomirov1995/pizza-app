@@ -1,23 +1,17 @@
-@mixin flex-container($justify-content, $align-items) {
-  display: flex;
-  justify-content: $justify-content;
-  align-items: $align-items;
-}
-
+@use '../../utils.scss';
 
 .layout {
-   @include flex-container(none, none);
-   display: flex;
+   @include utils.flex-container(none, none, none);
    min-height:  100vh;
 }
 
 .logo {
    flex: 1;
-   @include flex-container(center, center);
+   @include utils.flex-container(none, center, center);
 }
 
 .content {
    border-left: 1px solid var(--separator-color);
    flex: 1;
-   @include flex-container(center, center);
+   @include utils.flex-container(none, center, center);
 }

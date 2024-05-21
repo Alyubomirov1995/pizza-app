@@ -1,3 +1,5 @@
+@use '../../utils.scss';
+
 .head {
    position: relative;
    min-height: 165px;
@@ -15,22 +17,11 @@
    padding: 12px;
 }
 .name {
-   font: {
-      family: Open Sans;
-      size: 18px;
-      weight: 600;
-      height: normal;
-   }
+   @include utils.font(none, Open Sans, 18px, none, 600, normal);
 }
 
 .description {
-   color: var(--text-secondary-color);
-   line-height: normal;
-   font: {
-      family: Open Sans;
-      size: 15px;
-      weight: 400;
-   }
+   @include utils.font(var(--text-secondary-color), Open Sans, 15px, none, 400, normal);
 }
 
 .price {
@@ -40,13 +31,7 @@
    background: var(--white-color);
    padding: 3px 10px;
    border-radius: 20px;
-   color: #111719;
-   line-height: normal;
-   font: {
-      family: Open Sans;
-      size: 20px;
-      weight: 400;
-   }
+   @include utils.font(#111719, Open Sans, 20px, none, 400, normal);
 }
 
 .currency {
@@ -60,14 +45,8 @@
    background: var(--white-color);
    padding: 3px 8px;
    border-radius: 20px;
-   color: #111719;
-   line-height: normal;
    box-shadow: 0px 6.0714287757873535px 24.285715103149414px 0px #FE724C33;
-   font: {
-      family: Open Sans;
-      size: 12px;
-      weight: 400;
-   }
+   @include utils.font(#111719, Open Sans, 12px, none, 400, normal);
 }
 
 .add-to-cart {
@@ -75,7 +54,7 @@
    top: 15px;
    right: 15px;
    background: var(--primary-color);
-   border-radius: 50%;
+   border-radius: var(--b-r);
    width: 34px;
    height: 34px;
    border: none;

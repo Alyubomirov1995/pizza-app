@@ -1,15 +1,5 @@
-@mixin flex-container($flex-direction,$justify-content, $align-items) {
-  display: flex;
-  flex-direction: $flex-direction;
-  justify-content: $justify-content;
-  align-items: $align-items;
-}
-@mixin font($font-family, $font-size, $font-weight, $line-height) {
-   font-family:$font-family;
-   font-size: $font-size;
-   font-weight: $font-weight;
-   line-height: $line-height;
-}
+@use '../../utils.scss';
+
 
 .head {
 	position: relative;
@@ -17,7 +7,7 @@
 	border-radius: 19px;
 }
 .header {
-	@include flex-container(none, none, none);
+	@include utils.flex-container(none, none, none);
 }
 .headling {
 	padding-left: 50px;
@@ -32,11 +22,10 @@
 	padding: 12px;
 }
 .name {
-	@include font(Open Sans, 18px, 600, normal);
+	@include utils.font(none, Open Sans, 18px,none, 600, normal);
 }
 .description {
-	color: var(--text-secondary-color);
-	@include font(Open Sans, 15px, 400, normal);
+	@include utils.font (var(--text-secondary-color), Open Sans, 15px, none, 400, normal);
 }
 .price {
 	position: absolute;
@@ -45,8 +34,7 @@
 	background: var(--white-color);
 	padding: 3px 10px;
 	border-radius: 20px;
-	color: #111719;
-	@include font(Open Sans, 20px, 400, normal);
+	@include utils.font(#111719, Open Sans, 20px, none, 400, normal);
 }
 .currency {
 	color: var(--primary-color);
@@ -59,7 +47,7 @@
 	padding: 3px 8px;
 	border-radius: 20px;
 	color: #111719;
-	@include font(Open Sans, 12px, 400, normal);
+	@include utils.font(#111719,Open Sans, 12px, none, 400, normal);
 	box-shadow: 0px 6.0714287757873535px 24.285715103149414px 0px #FE724C33;
 }
 .add-to-cart {
@@ -67,7 +55,7 @@
 	top: 15px;
 	right: 15px;
 	background: var(--primary-color);
-	border-radius: 50%;
+	border-radius: var(--b-r);
 	width: 34px;
 	height: 34px;
 	border: none;
@@ -80,6 +68,6 @@
 	text-decoration: none;
 }
 .spinner {
-	@include flex-container(none, center, center);
+	@include utils.flex-container(none, center, center);
 	background-color: var(--primary-color);
 }

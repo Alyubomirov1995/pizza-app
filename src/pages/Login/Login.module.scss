@@ -1,20 +1,15 @@
-@mixin flex-container($flex-direction,$justify-content, $align-items) {
-  display: flex;
-  flex-direction: $flex-direction;
-  justify-content: $justify-content;
-  align-items: $align-items;
-}
+@use '../../utils.scss';
 
 
 .login {
-   @include flex-container(column, none, none);
+   @include utils.flex-container(column, none, none);
    gap: 30px;
    width: 100%;
    max-width: 500px;
 }
 
 .form {
-   @include flex-container(column, none, none);
+   @include utils.flex-container(column, none, none);
    gap: 30px;
 }
 
@@ -36,7 +31,7 @@
 }
 
 .links {
-   @include flex-container(column, center, none);
+   @include utils.flex-container(column, center, none);
    color: var(--text-secondary-color);
    text-align: center;
    font: {

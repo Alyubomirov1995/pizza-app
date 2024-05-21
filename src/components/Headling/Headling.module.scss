@@ -1,10 +1,6 @@
+@use '../../utils.scss';
+
 .h1 {
-   color: var(--text-color);
-   font: {
-      family: Open Sans;
-      size: 36.413px;
-      style: normal;
-      weight: 600;
-      height: 120%;}
+   @include utils.font(var(--text-color), Open Sans, 36.413px, normal, 600, 120%);
    margin: 0;
 }

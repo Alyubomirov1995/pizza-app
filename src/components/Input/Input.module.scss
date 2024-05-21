@@ -1,9 +1,7 @@
+@use '../../utils.scss';
+
 .input {
-   font: {
-      size: 17px;
-      style: normal;
-      weight: 400;}
-   color: var(--text-color);
+   @include utils.font(var(--text-color), Open Sans, 17px, normal, 400, none);
    border: 1px solid #eee;
    box-shadow: 15px 20px 45px 0px rgba(233, 233, 233, 0.25);
    border-radius: 10px;

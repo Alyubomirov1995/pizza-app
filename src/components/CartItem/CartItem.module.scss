@@ -1,11 +1,7 @@
-@mixin flex-container($justify-content, $align-items) {
-  display: flex;
-  justify-content: $justify-content;
-  align-items: $align-items;
-}
+@use '../../utils.scss';
 
 .item {
-   @include flex-container(center, flex-start);
+   @include utils.flex-container(none, center, flex-start);
    gap: 20px;
    max-width: 512 px;
    margin-bottom: 20px;
@@ -22,7 +18,7 @@
 }
 
 .actions {
-   @include flex-container(center, center);
+   @include utils.flex-container(none, center, center);
    margin-left: auto;
    gap: 10px;
    align-self: flex-start;
@@ -37,59 +33,40 @@
 }
 
 .name {
-   color:var(--text-color);
-   font: {
-      family: Open Sans;
-      size: 18px;
-      style: normal;
-      weight: 600;
-      height: normal;
-   }
+   @include utils.font(var(--text-color), Open Sans, 18px, normal, 600, normal)
 }
 
 .price{
-   color:var(--primary-color);
-   font: {
-      size: 16px;
-      style: normal;
-      weight: 600;
-      height: normal;
-   }
+   @include utils.font(var(--primary-color), Open Sans, 16px, normal, 600, normal)
 }
 
 .minus {
-   @include flex-container(center, center);
+   @include utils.flex-container(none, center, center);
    background: none;
    border: 1px solid var(--primary-color);
-   border-radius: 50%;
+   border-radius: var(--b-r);
    width: 29px;
    height: 29px;
 }
 
 .plus {
-   @include flex-container(center, center);
+   @include utils.flex-container(none,center, center);
    background: var(--primary-color);
    border: 1px solid var(--primary-color);
-   border-radius: 50%;
+   border-radius: var(--b-r);
    width: 29px;
    height: 29px;
 }
 
 .remove {
-   @include flex-container(center, center);
+   @include utils.flex-container(none, center, center);
    background: none;
    border: none;
-   border-radius: 50%;
+   border-radius: var(--b-r);
    width: 29px;
    height: 29px;
 }
 
 .number {
-   color: var(--text-color);
-   font: {
-      size: 16px;
-      style: normal;
-      weight: 600;
-      height: normal;
-   }
+   @include utils.font(var(--text-color), Open Sans, 16px, normal, 600, normal)
 }

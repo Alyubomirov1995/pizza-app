@@ -1,11 +1,7 @@
-@mixin flex-container($flex-direction,$justify-content, $align-items) {
-  display: flex;
-  flex-direction: $flex-direction;
-  justify-content: $justify-content;
-  align-items: $align-items;}
+@use '../../utils.scss';
 
 .success {
-   @include flex-container(column, center, center);
+   @include utils.flex-container(column, center, center);
    gap: 30px;
 }
 

@@ -1,25 +1,14 @@
-@mixin flex-container($flex-direction,$justify-content, $align-items) {
-  display: flex;
-  flex-direction: $flex-direction;
-  justify-content: $justify-content;
-  align-items: $align-items;
-}
+@use '../../utils.scss';
 
 
 .success {
-   @include flex-container(column, center, center);
+   @include utils.flex-container(column, center, center);
    gap: 30px;
 }
 
 .text {
-   color: var(--text-color);  
+   @include utils.font(var(--text-color), none, 31px, normal, 300, 120%);  
    text-align: center;
-   line-height: 120%;
-   font: {
-      size: 31px;
-      style: normal;
-      weight: 300;
-   }   
 }
 
 .avatar {
